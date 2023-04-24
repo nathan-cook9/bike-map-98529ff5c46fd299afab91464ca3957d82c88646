@@ -1,0 +1,23 @@
+[
+    {   
+        "id": 1,
+        "name": "Brock", 
+        "roadCondition": "0",
+        "traffic": "0",
+        "navigation": "0",
+        "overall": "0", 
+        "weighting": "0"
+    },
+
+    {
+        "id": 2,
+        "name": "Johnson", 
+        "roadCondition": "0",
+        "traffic": "0",
+        "navigation": "0",
+        "overall": "0", 
+        "weighting": "0"
+    }
+
+]
+

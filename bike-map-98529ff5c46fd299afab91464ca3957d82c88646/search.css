@@ -1,0 +1,127 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0px;
+}
+
+/* you searched for text*/
+h1, p {
+    position: relative;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav {
+    background-color: rgb(36, 95, 143);
+    padding-bottom: 50px;
+    margin: 0px;
+}
+
+/* Navigation bar list */
+nav ul:not(.resultList, .results) {
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+}
+
+/* links */
+a:not(.resultList, .results) {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Individual list elements */
+li:not(.resultList, .results) {
+    text-decoration: none;
+    float: right;
+    margin-right: 15px;
+}
+
+/* Cyclist Safety Kingston text in top left*/
+nav p {
+    display: flex;
+    float:left;
+    align-items: top;
+    font-weight: bold;
+    color: white;
+    font-size: 1.25em;
+    margin-left: 2em;
+}
+
+/* link elements in list */
+li a:not(.resultList, .results) {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    padding-bottom: 1.7em;
+}
+
+/* When hovering over each list item on navigation bar */
+li a:hover:not(.resultList, .results) {
+    color:lightgrey;
+    text-decoration: none;
+    border-bottom: solid white 0.75em;
+}
+
+/* when hovering over each element on About Us */
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 58px;
+    right: 80px;
+}
+
+/* contents under dropdown list */
+.dropdown-content {
+    display: none;
+    background-color: lightskyblue;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* design for contents inside the dropdown */
+.dropdown-content a:not(.resultList, .results) {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.resultList {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+}
+
+.results {
+    text-align: center;
+    color: black;
+    text-decoration: none;  
+}
+
+.results:hover {
+    color: rgb(96, 91, 91);
+}
+
+div {
+    text-align: center;
+    margin: 0.5em;
+    font-size: 1.25em;
+}
+
+.description {
+    font-size: 0.75em;
+    color: grey;
+}
+
+footer {
+    display: relative;
+    color: gray;
+    text-align: center;
+    margin-top: 18em;
+}

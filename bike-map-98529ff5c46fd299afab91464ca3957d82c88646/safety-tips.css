@@ -1,0 +1,268 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: none;
+    height: 100%;
+}
+
+/* GENERAL STYLING/HEADING FROM HERE */
+
+/* Navigation bar */
+nav {
+    background-color: rgb(36, 95, 143);
+    padding-bottom: 50px;
+    margin: 0px;
+}
+
+/* Navigation bar list */
+nav ul {
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+}
+
+/* links */
+a {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Individual list elements */
+li {
+    text-decoration: none;
+    float: right;
+    margin-right: 15px;
+}
+
+/* Cyclist Safety Kingston text in top left*/
+nav p {
+    display: flex;
+    float:left;
+    align-items: top;
+    font-weight: bold;
+    color: white;
+    font-size: 1.25em;
+    margin-left: 2em;
+}
+
+/* link elements in list */
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    padding-bottom: 1.7em;
+    z-index: 5;
+}
+
+/* When hovering over each list item on navigation bar */
+li a:hover:not(.about-us, .search-icon, .inputBox, .submitButton, .socials, .footer-menu) {
+    color:lightgrey;
+    text-decoration: none;
+    border-bottom: solid white 0.75em;
+}
+
+
+/* when hovering over each element on About Us */
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 62px;
+}
+
+/* contents under dropdown list */
+.dropdown-content {
+    display: none;
+    background-color: lightskyblue;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* design for contents inside the dropdown */
+.dropdown-content a {
+    padding: 1em  16px;
+    display: block;
+}
+
+/* Footer for the main page */
+footer {
+    color: grey;
+    text-align: center;
+}
+
+/* styling for the search icon */
+.search-icon {
+    background-image: url("images/search-icon-50.png");
+    background-repeat: no-repeat;
+    padding-left: 2.75em;
+    background-position-y: 100%;
+    background-size: 2em;
+}
+
+.submitButton {
+    background-image: url("images/search-icon-50.png");
+    background-repeat: no-repeat;
+    background-size: 2em;
+    background-position-y: -30%;
+    padding-right: 1.3em;
+}
+
+/* TO HERE, DO NOT EDIT UNLESS YOU ARE CHANING NAVIGATION BAR OR HEADER */
+
+/* WRAPPER GRID LAYOUT */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 1em;
+}
+
+.heading {
+    text-align: center;
+    grid-column: 1/6;
+    grid-row: 1;
+}
+
+footer {
+    position:relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding-top: 10px;
+    grid-column: 1/6;
+    grid-row: 6;
+    background-color: #4A88C5;
+    color: whitesmoke;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+.Paragraph{
+    line-height: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials li a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 8px;
+    border-radius: 50%;
+    width: 30px;
+}
+
+.socials li a:hover{
+    color: #27bcda;
+    border-bottom: none;
+}
+
+.footer-menu{
+    margin-bottom: 5px;
+}
+
+.footer-menu ul{
+    display: flex;
+}
+
+.footer-menu ul li{
+    padding-right: 10px;
+    display: block;
+}
+
+.footer-menu ul li a{
+    color: #cfd2d6;
+    border: 1.3px solid white;
+    padding: 6px 15px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.footer-menu ul li a:hover{
+    color: #27bcda;
+    border-bottom: none;
+}
+
+.one {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+}
+
+.two {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+}
+
+.three {
+    grid-column: 3;
+    grid-row: 2;
+    text-align: center;
+}
+
+.four {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 3;
+    text-align: center;
+}
+
+.one, .two, .three, .four, .five, .six {
+    font-weight: bold;
+    font-size: large;
+    min-height: 100%;
+}
+
+.description {
+    font-weight: lighter;
+    background-color: #BBDAF2;
+    border-radius: 10px;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+

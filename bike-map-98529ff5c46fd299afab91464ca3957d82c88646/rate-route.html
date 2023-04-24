@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="rate-route.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="search.js" defer></script>
+<style>
+</style>
+<script defer src="rate-route.js"></script>
+<header>
+    <nav>
+        <ul>
+            <li><a class="search-icon"></a></li>
+            <li class="dropdown">
+                <a href="about-us.html">About Us</a>
+                <div class="dropdown-content">
+                    <a href="goals.html">Goals</a>
+                    <a href="theTeam.html">The team</a>
+                </div>
+            </li>
+            <li><a href="plan-your-route.html">Plan Your Route</a></li>
+            <li><a href="rate-route-buttons.html">Rate your route</a></li>
+            <li><a href="safety-tips.html">Tips/Etiquette</a></li>
+            <li><a href="main-page.html"> Main Menu</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="headerImage">
+        <img src="images/city-streets-bike-cropped.jpg" alt="picture of a city street biker" style="width:100%">
+    </div>
+
+    <h1>
+        Rate your route!
+    </h1>
+
+</header>
+
+<body>
+    <div class="wrapper">
+
+        <div class="slidecontainer">
+            <input type="range" min="0" max="5" value="5" step="1" class="slider" id="myRange">
+          </div>
+        
+          <div class="slidecontainer2">
+            <input type="range" min="0" max="5" value="5" step="1" class="slider" id="myRange">
+          </div>
+        
+          <div class="slidecontainer">
+            <input type="range" min="0" max="5" value="5" step="1" class="slider" id="myRange">
+          </div>
+
+    </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <h3>Official 2023 Cycling Safety Kingston Website</h3>
+        <p class="Paragraph">Would you like to know more about Kingston Bicycle Safety Codes? Contact City of Kingston or <a href="https://www.cityofkingston.ca/explore/active-transportation/cyclists">click here</a> for more information!</p>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/TheCityOfKingston" class="fa fa-facebook"></a></li>
+            <li><a href="https://www.instagram.com/city.of.kingston/" class="fa fa-instagram"></a></li>
+            <li><a href="https://twitter.com/cityofkingston" class="fa fa-twitter"></a></li>
+        </ul>
+
+        <div class="footer-menu">
+            <ul class="menu">
+                <li><a href="main-page.html">Main Menu</a></li>
+                <li><a href="safety-tips.html">Tips/Etiquette</a></li>
+                <li><a href="rate-route.html">Rate your Route</a></li>
+                <li><a href="plan-your-route.html">Plan your Route</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    //DOM manipulation
+    const navigationBar = document.querySelector('ul');
+    const searchBar = document.querySelector('.search-icon');
+    const listItem = document.createElement('li');
+    const wrapper = document.createElement('a');
+    const inputForm = document.createElement('form');
+    const input = document.createElement('input');
+    const submitWrapper = document.createElement('a');
+    const submitListItem = document.createElement('li');
+    const submitButton = document.createElement('a');
+    const controller = new AbortController();
+
+    searchBar.addEventListener('click', () => {
+        changeSearchBar()
+    },
+        { signal: controller.signal },
+        searchBar.focus()
+    );
+
+    submitButton.setAttribute('href', 'search.html');
+
+    submitButton.addEventListener('click', () => {
+        //grabbing the value of the text box
+        //possibly add cookies to display the text on here
+    })
+
+    //focusing onto the search bar
+    searchBar.onload = function () {
+        searchBar.focus();
+    }
+
+    //function for changing the search bar
+    function changeSearchBar() {
+        searchBar.style.background = 'none';
+        controller.abort();
+
+        inputForm.setAttribute('type', 'text');
+        wrapper.setAttribute('class', 'inputBox');
+        submitWrapper.setAttribute('class', 'inputBox');
+        submitButton.setAttribute('class', 'submitButton');
+
+        navigationBar.prepend(submitListItem);
+        submitListItem.appendChild(submitWrapper);
+        //appending the submission button
+        submitWrapper.appendChild(submitButton);
+
+        navigationBar.prepend(listItem);
+        listItem.appendChild(wrapper);
+        wrapper.append(inputForm);
+        inputForm.appendChild(input);
+    }
+</script>
+
+</html>
